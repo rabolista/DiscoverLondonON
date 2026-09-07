@@ -15,7 +15,7 @@ class DiscoverScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('Discover London ON'),
+        title: const Text('London ON'),
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: Colors.white,

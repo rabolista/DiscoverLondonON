@@ -22,7 +22,7 @@ class HolidaysSection extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 100,
+          height: 128,
           child: ListView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -31,7 +31,7 @@ class HolidaysSection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 8, bottom: 16),
                   child: SizedBox(
-                    width: 140,
+                    width: 150,
                     child: Tile(
                       padding: const EdgeInsets.all(10),
                       child: Column(
@@ -44,6 +44,8 @@ class HolidaysSection extends StatelessWidget {
                           const SizedBox(height: 4),
                           Text(
                             holiday.name,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 4),

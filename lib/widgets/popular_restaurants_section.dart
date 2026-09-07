@@ -24,7 +24,7 @@ class PopularRestaurantsSection extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 130,
+          height: 150,
           child: ListView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -58,6 +58,8 @@ class PopularRestaurantsSection extends StatelessWidget {
                                 children: [
                                   Text(
                                     restaurant.name,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                                   ),
                                   const SizedBox(height: 6),
@@ -69,6 +71,7 @@ class PopularRestaurantsSection extends StatelessWidget {
                                         child: Text(
                                           '${restaurant.rating.toStringAsFixed(1)} • ${restaurant.cuisine} • ${restaurant.priceRange}',
                                           style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+                                          maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                         ),
                                       ),
@@ -77,6 +80,8 @@ class PopularRestaurantsSection extends StatelessWidget {
                                   const SizedBox(height: 6),
                                   Text(
                                     restaurant.neighbourhood,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[600]),
                                   ),
                                 ],
