@@ -10,6 +10,7 @@ class Categories {
     AppCategory(name: 'Running Groups', icon: Icons.directions_run),
     AppCategory(name: 'Live Events', icon: Icons.theater_comedy),
     AppCategory(name: 'Food', icon: Icons.storefront),
+    AppCategory(name: 'Groceries', icon: Icons.local_grocery_store),
     AppCategory(name: 'History', icon: Icons.account_balance),
     AppCategory(name: 'Outdoors', icon: Icons.park),
   ];

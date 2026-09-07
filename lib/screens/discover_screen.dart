@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import '../theme/colors.dart';
 import '../theme/theme_controller.dart';
 import '../widgets/categories_row.dart';
+import '../widgets/events_section.dart';
 import '../widgets/holidays_section.dart';
 import '../widgets/popular_destinations_section.dart';
 import '../widgets/popular_restaurants_section.dart';
@@ -109,6 +110,7 @@ class DiscoverScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: 8),
                       PopularDestinationsSection(),
+                      EventsSection(),
                       PopularRestaurantsSection(),
                       TrendingCreatorsSection(),
                       HolidaysSection(),

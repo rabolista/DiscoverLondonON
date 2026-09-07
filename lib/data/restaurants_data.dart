@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
 import '../models/restaurant.dart';
 
-// Fictional restaurant concepts representative of London, ON's dining scene (not real businesses).
+// London, ON dining. Entries with an address are real local restaurants;
+// the rest are fictional concepts representative of the city's dining scene.
 class RestaurantsData {
   RestaurantsData._();
 
   static const all = <Restaurant>[
+    Restaurant(
+      name: 'Craft Farmacy',
+      cuisine: 'Café & Comfort Food',
+      priceRange: r'$$',
+      neighbourhood: 'Old South',
+      details:
+          'A bustling all-day café and bakery on Wharncliffe Road South, known '
+          'for scratch-made brunch, house pastries and specialty coffee, plus a '
+          'grab-and-go market fridge.',
+      icon: Icons.local_cafe,
+      rating: 4.5,
+      address: '449 Wharncliffe Rd S, London, ON',
+    ),
     Restaurant(
       name: 'The Foundry Kitchen',
       cuisine: 'Modern Canadian',

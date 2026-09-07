@@ -40,7 +40,94 @@ class CityGuideData {
         eastLondon,
         whiteOaks,
         runningGroups,
+        groceries,
       ].expand((sections) => sections).expand((s) => s.places).toList();
+
+  /// Grocery stores and international food markets around London, Ontario.
+  static const groceries = <PlaceSection>[
+    PlaceSection(title: 'Grocery & Food Markets', places: [
+      Place(
+        name: 'Costco Wholesale',
+        category: 'Warehouse Club',
+        details:
+            'Members-only warehouse club with bulk groceries, fresh produce and '
+            'meat, a bakery, and a members\' gas bar. London\'s Costco sits just '
+            'off the 401 in the south end.',
+        icon: Icons.warehouse,
+        address: '4313 Wellington Rd S, London, ON N6E 2Z8',
+        tags: ['Groceries'],
+      ),
+      Place(
+        name: 'Walmart Supercentre',
+        category: 'Supercentre',
+        details:
+            'Full grocery department alongside general merchandise. The White '
+            'Oaks Mall Supercentre in south London is open late seven days a '
+            'week; there is a second Supercentre at Northland on Fanshawe Park '
+            'Road West.',
+        icon: Icons.storefront,
+        address: 'White Oaks Mall, 1105 Wellington Rd S, London, ON N6E 1V4',
+        tags: ['Groceries'],
+      ),
+      Place(
+        name: "Brent & Jennie's No Frills",
+        category: 'Discount Grocery',
+        details:
+            'No-frills discount supermarket on Hamilton Road in Old East London, '
+            'with a broad selection of world-foods aisles reflecting the '
+            'neighbourhood.',
+        icon: Icons.shopping_basket,
+        address: '960 Hamilton Rd, London, ON N5W 1A3',
+        tags: ['Groceries'],
+      ),
+      Place(
+        name: 'Dollarama (Citi Plaza)',
+        category: 'Dollar Store',
+        details:
+            'Downtown Dollarama inside Citi Plaza for cheap pantry staples, '
+            'snacks, drinks and household basics. Dozens more Dollarama stores '
+            'are spread across the city, including White Oaks Mall.',
+        icon: Icons.store,
+        address: '355 Wellington St, London, ON',
+        tags: ['Groceries'],
+      ),
+      Place(
+        name: 'T&T Supermarket',
+        category: 'Asian Supermarket',
+        details:
+            'Canada\'s largest Asian grocery chain, with a big London store at '
+            'Oxford & Wonderland. Fresh Chinese and pan-Asian produce, a live '
+            'seafood counter, hot-food kitchen, bakery and a huge dry-goods '
+            'selection.',
+        icon: Icons.set_meal,
+        address: '530 Oxford St W, London, ON N6H 1T6',
+        tags: ['Groceries', 'Food'],
+      ),
+      Place(
+        name: 'Superking Supermarket',
+        category: 'International Grocery',
+        details:
+            'A large international supermarket on Wonderland Road South stocking '
+            'Middle Eastern, South Asian, African, Caribbean and East Asian '
+            'foods, with a halal butcher and a bakery. A second location is at '
+            'Westmount Shopping Centre.',
+        icon: Icons.local_grocery_store,
+        address: '785 Wonderland Rd S, London, ON N6K 1M6',
+        tags: ['Groceries', 'Food'],
+      ),
+      Place(
+        name: 'London-Asian Foods',
+        category: 'Filipino & Asian Grocery',
+        details:
+            'A Filipino-owned grocery on Huron Street carrying Filipino pantry '
+            'staples, frozen goods, snacks and baked goods (pandesal, ensaymada) '
+            'along with wider Southeast Asian ingredients.',
+        icon: Icons.rice_bowl,
+        address: '1332 Huron St, London, ON',
+        tags: ['Groceries', 'Food'],
+      ),
+    ]),
+  ];
 
   /// Well-known community running groups and run clubs in London, Ontario.
   static const runningGroups = <PlaceSection>[
