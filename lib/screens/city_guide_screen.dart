@@ -3,6 +3,7 @@ import '../models/destination.dart';
 import '../data/city_guide_data.dart';
 import '../theme/colors.dart';
 import '../widgets/destination_image.dart';
+import '../widgets/image_credit_chip.dart';
 import '../widgets/place_row.dart';
 import 'place_detail_screen.dart';
 
@@ -27,6 +28,17 @@ class CityGuideScreen extends StatelessWidget {
                 height: 220,
                 width: double.infinity,
                 child: DestinationImage(destination: destination),
+              ),
+              const Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.center,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.transparent, Color(0xB3000000)],
+                    ),
+                  ),
+                ),
               ),
               Positioned(
                 left: 16,
@@ -54,6 +66,12 @@ class CityGuideScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              if (destination.imageCredit != null)
+                Positioned(
+                  right: 6,
+                  top: 6,
+                  child: ImageCreditChip(text: destination.imageCredit!),
+                ),
             ],
           ),
           if (sections.isEmpty)

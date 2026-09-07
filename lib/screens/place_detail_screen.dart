@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/place.dart';
 import '../theme/colors.dart';
 import '../widgets/get_directions_button.dart';
+import '../widgets/image_credit_chip.dart';
 import '../widgets/place_image.dart';
 
 class PlaceDetailScreen extends StatelessWidget {
@@ -16,7 +17,21 @@ class PlaceDetailScreen extends StatelessWidget {
       appBar: AppBar(title: Text(place.name)),
       body: ListView(
         children: [
-          SizedBox(height: 220, child: PlaceImage(icon: place.icon, iconSize: 48)),
+          SizedBox(
+            height: 220,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                PlaceImage(icon: place.icon, iconSize: 48, imageUrl: place.imageUrl),
+                if (place.imageCredit != null)
+                  Positioned(
+                    right: 6,
+                    top: 6,
+                    child: ImageCreditChip(text: place.imageCredit!),
+                  ),
+              ],
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(

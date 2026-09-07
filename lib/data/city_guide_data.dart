@@ -112,6 +112,9 @@ class CityGuideData {
         icon: Icons.stadium,
         address: '99 Dundas St, London, ON N6A 6E3',
         tags: ['Sport', 'Live Events'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Budweiser_Gardens_-_Interior_2015.JPG/960px-Budweiser_Gardens_-_Interior_2015.JPG',
+        imageCredit: 'Photo: Jfvoll (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Covent Garden Market',
@@ -121,6 +124,9 @@ class CityGuideData {
         icon: Icons.storefront,
         address: '130 King St, London, ON N6A 1C2',
         tags: ['Food'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Covent_Garden_Market%2C_London%2C_Ontario%2C_2026-07-31_01.jpg/960px-Covent_Garden_Market%2C_London%2C_Ontario%2C_2026-07-31_01.jpg',
+        imageCredit: 'Photo: Chris Woodrich (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Museum London',
@@ -130,6 +136,9 @@ class CityGuideData {
         icon: Icons.museum,
         address: '421 Ridout St N, London, ON N6A 5H4',
         tags: ['Art', 'History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Museum_London%2C_London%2C_Ontario_%2821202390374%29.jpg/960px-Museum_London%2C_London%2C_Ontario_%2821202390374%29.jpg',
+        imageCredit: 'Photo: Ken Lund (CC BY-SA 2.0)',
       ),
       Place(
         name: 'Eldon House',
@@ -139,6 +148,9 @@ class CityGuideData {
         icon: Icons.house,
         address: '481 Ridout St N, London, ON N6A 2P4',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Eldon_House%2C_London%2C_Ontario_%2821834783621%29.jpg/960px-Eldon_House%2C_London%2C_Ontario_%2821834783621%29.jpg',
+        imageCredit: 'Photo: Ken Lund (CC BY-SA 2.0)',
       ),
       Place(
         name: 'Grand Theatre',
@@ -148,6 +160,9 @@ class CityGuideData {
         icon: Icons.theater_comedy,
         address: '471 Richmond St, London, ON N6A 3E4',
         tags: ['Art', 'Live Events'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Grand_Theatre%2C_London%2C_Ontario%2C_2026-08-01.jpg/960px-Grand_Theatre%2C_London%2C_Ontario%2C_2026-08-01.jpg',
+        imageCredit: 'Photo: Chris Woodrich (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Victoria Park',
@@ -157,6 +172,9 @@ class CityGuideData {
         icon: Icons.park,
         address: 'Central Ave & Wellington St, London, ON',
         tags: ['Outdoors', 'Live Events'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Victoria_Park_bandshell%2C_London_Ontario01.jpg/960px-Victoria_Park_bandshell%2C_London_Ontario01.jpg',
+        imageCredit: 'Photo: WayneRay (public domain)',
       ),
       Place(
         name: 'Banting House National Historic Site',
@@ -166,6 +184,9 @@ class CityGuideData {
         icon: Icons.science,
         address: '442 Adelaide St N, London, ON N6B 3H3',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Banting_House_London_Ontario.jpg/960px-Banting_House_London_Ontario.jpg',
+        imageCredit: 'Photo: Adam Bishop (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Middlesex County Building',
@@ -175,6 +196,9 @@ class CityGuideData {
         icon: Icons.account_balance,
         address: '399 Ridout St N, London, ON',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Middlesex_County_Courthouse.jpg/960px-Middlesex_County_Courthouse.jpg',
+        imageCredit: 'Photo: Alexandra Gorska (CC BY-SA 3.0)',
       ),
     ]),
   ];
@@ -189,6 +213,9 @@ class CityGuideData {
         icon: Icons.music_note,
         address: '795 Dundas St, London, ON N5W 2Z8',
         tags: ['Art', 'Live Events'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Aeolian_Hall%2C_London_ON.JPG/960px-Aeolian_Hall%2C_London_ON.JPG',
+        imageCredit: 'Photo: SimonP (CC BY-SA 3.0)',
       ),
       Place(
         name: "Old East Village Farmers' Market",
@@ -212,6 +239,9 @@ class CityGuideData {
         icon: Icons.architecture,
         address: 'Blackfriars St & Ridout St N, London, ON',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blackfriars_Street_Bridge%2C_London%2C_Ontario.jpg/960px-Blackfriars_Street_Bridge%2C_London%2C_Ontario.jpg',
+        imageCredit: 'Photo: Gogerr (CC BY 4.0)',
       ),
       Place(
         name: 'Labatt Memorial Park',
@@ -221,6 +251,9 @@ class CityGuideData {
         icon: Icons.sports_baseball,
         address: '25 Wilson Ave, London, ON N6H 1X7',
         tags: ['Sport', 'History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Labatt_Memorial_Park_-_London%2C_ON.jpg/960px-Labatt_Memorial_Park_-_London%2C_ON.jpg',
+        imageCredit: 'Photo: Jfvoll (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Wortley Village',
@@ -243,6 +276,9 @@ class CityGuideData {
         icon: Icons.park,
         address: 'Springbank Dr, London, ON',
         tags: ['Outdoors'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Springbank_Park%2C_London%2C_Ontario_%2851939557167%29.jpg/960px-Springbank_Park%2C_London%2C_Ontario_%2851939557167%29.jpg',
+        imageCredit: 'Photo: Dennis Sparks (CC BY-SA 2.0)',
       ),
       Place(
         name: 'Storybook Gardens',
@@ -269,6 +305,9 @@ class CityGuideData {
             'A multi-use paved trail network following the Thames River through the city, popular with cyclists and runners and linking many of London\'s parks.',
         icon: Icons.directions_bike,
         tags: ['Outdoors', 'Sport'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Forks_of_the_Thames.jpg/960px-Forks_of_the_Thames.jpg',
+        imageCredit: 'Photo: Gogerr (CC BY-SA 4.0)',
       ),
     ]),
   ];
@@ -283,6 +322,9 @@ class CityGuideData {
         icon: Icons.school,
         address: '1151 Richmond St, London, ON N6A 3K7',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fall_ColoursatWestern.jpg/960px-Fall_ColoursatWestern.jpg',
+        imageCredit: 'Photo: D. Keddy (CC BY-SA 3.0)',
       ),
       Place(
         name: 'TD Stadium',
@@ -314,6 +356,9 @@ class CityGuideData {
         icon: Icons.museum,
         address: '1600 Attawandaron Rd, London, ON N6G 3M6',
         tags: ['History', 'Art'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/MusOntarArchae_4618a.jpg/960px-MusOntarArchae_4618a.jpg',
+        imageCredit: 'Photo: QuartierLatin1968 (CC BY-SA 3.0)',
       ),
     ]),
   ];
@@ -328,6 +373,9 @@ class CityGuideData {
         icon: Icons.forest,
         address: '1424 Clarke Rd, London, ON N5V 5B9',
         tags: ['Outdoors'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Sunrise_-_Fanshawe_Lake_%2821538701481%29.jpg/960px-Sunrise_-_Fanshawe_Lake_%2821538701481%29.jpg',
+        imageCredit: 'Photo: WabbitWanderer (CC BY-SA 2.0)',
       ),
       Place(
         name: 'Fanshawe Pioneer Village',
@@ -337,6 +385,9 @@ class CityGuideData {
         icon: Icons.cottage,
         address: '2609 Fanshawe Park Rd E, London, ON N5X 4A1',
         tags: ['History'],
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Fanshawe_Pioneer_Village_buildings.jpg/960px-Fanshawe_Pioneer_Village_buildings.jpg',
+        imageCredit: 'Photo: Adam Bishop (CC BY-SA 4.0)',
       ),
       Place(
         name: 'Fanshawe College',
@@ -345,6 +396,9 @@ class CityGuideData {
             'One of Ontario\'s largest colleges, offering career-focused diploma and degree programs to tens of thousands of students.',
         icon: Icons.school,
         address: '1001 Fanshawe College Blvd, London, ON N5Y 5R6',
+        imageUrl:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Fanshawe_College%2C_London%2C_Ontario%2C_2026-08-01_32.jpg/960px-Fanshawe_College%2C_London%2C_Ontario%2C_2026-08-01_32.jpg',
+        imageCredit: 'Photo: Chris Woodrich (CC BY-SA 4.0)',
       ),
     ]),
   ];

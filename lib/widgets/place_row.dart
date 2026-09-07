@@ -26,7 +26,7 @@ class PlaceRow extends StatelessWidget {
               child: SizedBox(
                 width: 56,
                 height: 56,
-                child: PlaceImage(icon: place.icon),
+                child: PlaceImage(icon: place.icon, imageUrl: place.imageUrl),
               ),
             ),
             const SizedBox(width: 12),
