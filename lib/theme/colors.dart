@@ -8,7 +8,13 @@ class AppColors {
   static const primary = Color(0xFF2E7D32);
   static const primaryDark = Color(0xFF1B5E20);
   static const gradient = [Color(0xFF4C9A4C), Color(0xFF1B5E20)];
+  static const _darkGradient = [Color(0xFF15361A), Color(0xFF0E110E)];
   static const avatarGradient = [Color(0xFF66BB6A), Color(0xFF1B5E20)];
+
+  /// Header gradient — bright forest green in light mode, a deep green that
+  /// fades into the dark background in dark mode.
+  static List<Color> headerGradient(BuildContext context) =>
+      _isDark(context) ? _darkGradient : gradient;
 
   // Light surfaces
   static const _lightBackground = Color(0xFFF1F4F1);

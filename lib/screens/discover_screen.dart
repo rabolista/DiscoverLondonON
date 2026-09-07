@@ -33,9 +33,9 @@ class DiscoverScreen extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: AppColors.gradient,
+                colors: AppColors.headerGradient(context),
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -62,27 +62,28 @@ class DiscoverScreen extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: AppColors.card(context),
                         borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: AppColors.cardBorder(context)),
                         boxShadow: [
                           BoxShadow(
-                            color: AppColors.primaryDark.withValues(alpha: 0.25),
+                            color: Colors.black.withValues(alpha: 0.25),
                             blurRadius: 16,
                             offset: const Offset(0, 6),
                           ),
                         ],
                       ),
-                      child: const Row(
+                      child: Row(
                         children: [
-                          Icon(Icons.search, color: AppColors.primary, size: 20),
-                          SizedBox(width: 10),
+                          Icon(Icons.search, color: AppColors.accent(context), size: 20),
+                          const SizedBox(width: 10),
                           Expanded(
                             child: Text(
                               'Where in London do you want to go?',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xFF6B7280),
+                                color: AppColors.muted(context),
                               ),
                             ),
                           ),

@@ -33,8 +33,9 @@ class CategoriesRow extends StatelessWidget {
                         width: 54,
                         height: 54,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: AppColors.card(context),
                           shape: BoxShape.circle,
+                          border: Border.all(color: AppColors.cardBorder(context)),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withValues(alpha: 0.28),
@@ -43,7 +44,7 @@ class CategoriesRow extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Icon(category.icon, size: 22, color: AppColors.primary),
+                        child: Icon(category.icon, size: 22, color: AppColors.accent(context)),
                       ),
                       const SizedBox(height: 8),
                       Text(
