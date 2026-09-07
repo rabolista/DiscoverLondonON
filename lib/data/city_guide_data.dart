@@ -39,7 +39,68 @@ class CityGuideData {
         northLondon,
         eastLondon,
         whiteOaks,
+        runningGroups,
       ].expand((sections) => sections).expand((s) => s.places).toList();
+
+  /// Well-known community running groups and run clubs in London, Ontario.
+  static const runningGroups = <PlaceSection>[
+    PlaceSection(title: 'Run Clubs & Groups', places: [
+      Place(
+        name: 'Soul Runners Run Club',
+        category: 'Run Club',
+        details:
+            'A welcoming London run club with coached programs for every level, from learning to run your first 5K to structured training. Drop-in group runs take place through the week at Edgevalley Park, Medway Road in Arva, and the North London Athletic Fields.',
+        icon: Icons.directions_run,
+        address: 'Edgevalley Park, 269 Edgevalley Rd, London, ON',
+        tags: ['Running Groups', 'Sport'],
+      ),
+      Place(
+        name: 'London Pacers Running Club',
+        category: 'Running Club',
+        details:
+            'A not-for-profit club founded in 1972 with around 200 members, promoting running, racewalking and track for all ages and abilities. The Pacers host the annual Thanksgiving Day cross-country race at Springbank Park and a summer Mile Night on the track.',
+        icon: Icons.groups,
+        address: 'Springbank Park, London, ON',
+        tags: ['Running Groups', 'Sport'],
+      ),
+      Place(
+        name: 'BackRoads Run Club',
+        category: 'Run Club',
+        details:
+            'A free social run out of BackRoads Brews + Shoes every Thursday at 6 PM, with 5K and 10K routes and every pace welcome back at the taproom afterward. The shop also runs a seasonal BackRoads Running Series.',
+        icon: Icons.directions_run,
+        address: '1295 Riverbend Rd, London, ON N6K 0G2',
+        tags: ['Running Groups', 'Sport'],
+      ),
+      Place(
+        name: "Runners' Choice Saturday Run",
+        category: 'Group Run',
+        details:
+            'A friendly Saturday morning group run at 8:30 AM along the Thames River path system, meeting at the Runners\' Choice store on Springbank Drive. Staff are on hand for advice on training, shoes and apparel.',
+        icon: Icons.storefront,
+        address: '520 Springbank Dr, London, ON',
+        tags: ['Running Groups', 'Sport'],
+      ),
+      Place(
+        name: 'Running Room Run Club',
+        category: 'Run Club',
+        details:
+            'The Running Room\'s free run and walk club meets from the downtown London store, with regular group runs and learn-to-run and race training clinics for 5K through marathon distances.',
+        icon: Icons.directions_run,
+        address: '620 Richmond St, London, ON N6A 5J9',
+        tags: ['Running Groups', 'Sport'],
+      ),
+      Place(
+        name: 'Forest City Road Races',
+        category: 'Running Community',
+        details:
+            'A long-running non-profit event and community of London runners supporting the Thames Valley Children\'s Centre, with an Athletics Ontario-certified spring race weekend and group training runs in the lead-up.',
+        icon: Icons.emoji_events,
+        address: 'London, ON',
+        tags: ['Running Groups', 'Sport'],
+      ),
+    ]),
+  ];
 
   static const downtownLondon = <PlaceSection>[
     PlaceSection(title: 'Top Attractions', places: [

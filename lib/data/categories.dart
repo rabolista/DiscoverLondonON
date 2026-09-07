@@ -7,6 +7,7 @@ class Categories {
   static const all = <AppCategory>[
     AppCategory(name: 'Art', icon: Icons.palette),
     AppCategory(name: 'Sport', icon: Icons.sports_baseball),
+    AppCategory(name: 'Running Groups', icon: Icons.directions_run),
     AppCategory(name: 'Live Events', icon: Icons.theater_comedy),
     AppCategory(name: 'Food', icon: Icons.storefront),
     AppCategory(name: 'History', icon: Icons.account_balance),
