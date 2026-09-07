@@ -6,7 +6,7 @@ annual events, plus Ontario public holidays. All content ships inside the app;
 the only network use is loading landmark photos and opening maps.
 
 - **Store name:** London ON
-- **Bundle ID / applicationId:** `com.rabski.TravelDiscovery` (iOS and Android)
+- **Bundle ID / applicationId:** `com.rabski.TravelDiscoveryLondon` (iOS and Android)
 - **Version:** 1.1.0 (build 2)
 - **Repo:** https://github.com/rabolista/DiscoverLondonON
 
@@ -16,7 +16,7 @@ These live in the store consoles, not in the build. The build is linked to a
 store record only by its bundle ID.
 
 - **Apple ID (App Store Connect):** `6809522146`
-- **SKU:** `com.rabski.TravelDiscovery`
+- **SKU:** `com.rabski.TravelDiscoveryLondon`
 - **Apple Team ID:** `9HH5H3KSDL` (automatic signing)
 
 ---

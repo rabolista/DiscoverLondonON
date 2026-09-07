@@ -3,7 +3,7 @@
 **Last updated:** 7 September 2026
 
 This policy explains how the **London ON** mobile app (bundle ID
-`com.rabski.TravelDiscovery`, the "App"), published by Robert Allan Bolista (the
+`com.rabski.TravelDiscoveryLondon`, the "App"), published by Robert Allan Bolista (the
 "Developer", "we"), handles information. By using the App you agree to this
 policy.
 
@@ -11,7 +11,8 @@ policy.
 
 The App does not have accounts, does not show ads, and contains no analytics or
 tracking. **We do not collect, store, or share any personal information about
-you.** All of the guide content is bundled in the App itself.
+you.** All guide content, icons, and images are bundled inside the App itself —
+nothing is downloaded from the internet while you browse.
 
 ## Information we collect
 
@@ -21,42 +22,25 @@ information, and it has no server that could receive such data.
 
 ## Information stored on your device
 
-The App stores a small amount of data locally on your device only. It is never
-transmitted anywhere and is removed when you uninstall the App:
-
-- **Appearance preference** — whether you chose System, Light, or Dark mode
-  (saved with the operating system's standard preferences storage).
-- **Cached images** — copies of the landmark and food photos shown in the App,
-  kept so they load quickly and work offline. You can clear these at any time
-  from your device's app storage settings.
+**None.** The App does not use local storage, cookies, or any persistence
+mechanism. It holds no settings or cached data between launches.
 
 ## Network connections
 
-The App makes outbound internet requests only to:
-
-1. **`upload.wikimedia.org` (Wikimedia Foundation)** — to download the
-   Creative-Commons and public-domain photos used for neighbourhoods,
-   attractions and dishes. These are ordinary image requests. Wikimedia may log
-   standard technical information such as your IP address and user agent as
-   described in the [Wikimedia Foundation Privacy
-   Policy](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy). We
-   receive nothing from these requests.
+The App itself makes no network requests. The only way it reaches the internet
+is indirectly: when you tap **"Get Directions"** on an attraction or restaurant,
+the App opens your device's default maps app (or browser) with that place's
+name and address already filled in. From that point on, you are using Google
+Maps (or whichever app/browser handles the link), governed by that service's
+own privacy policy — not this one.
 
 The App does not use any advertising, analytics, crash-reporting, or
-attribution SDKs.
-
-## Opening other apps
-
-When you tap **"Get Directions"** or a link on the About screen, your device
-opens Google Maps or your browser outside the App. Anything you do there is
-governed by that app's or website's own privacy policy, not this one. The App
-only passes the place name and address (or the link) that is already visible on
-screen.
+attribution SDKs, and it does not embed any web views or remote images.
 
 ## Third-party services
 
-- **Google Maps / your browser** — launched only when you tap a directions
-  button or link (see above).
+- **Maps app / browser** — launched only when you tap "Get Directions" (see
+  above).
 - **Apple App Store / Google Play** — if you download or update the App, the
   store handles that transaction under its own privacy policy. We do not receive
   individual customer information from the stores.
@@ -68,9 +52,8 @@ anyone, including children under 13.
 
 ## Your choices
 
-- Clear cached images: your device's Settings → Apps → London ON → Storage.
-- Reset the appearance preference: it is cleared when you uninstall the App.
-- There is no account to delete because none is ever created.
+There is nothing to clear or reset — the App stores no data and creates no
+account.
 
 ## Changes to this policy
 

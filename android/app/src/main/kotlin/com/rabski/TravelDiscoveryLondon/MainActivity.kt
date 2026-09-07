@@ -1,4 +1,4 @@
-package com.rabski.TravelDiscovery
+package com.rabski.TravelDiscoveryLondon
 
 import io.flutter.embedding.android.FlutterActivity
 

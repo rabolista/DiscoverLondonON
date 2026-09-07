@@ -40,4 +40,4 @@ Requires Flutter 3.47+.
 ## App identifier
 
 Both the iOS and Android targets use the bundle / application ID
-`com.rabski.TravelDiscovery`.
+`com.rabski.TravelDiscoveryLondon`.

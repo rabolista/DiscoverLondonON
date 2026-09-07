@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.rabski.TravelDiscovery"
+    namespace = "com.rabski.TravelDiscoveryLondon"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.rabski.TravelDiscovery"
+        applicationId = "com.rabski.TravelDiscoveryLondon"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
