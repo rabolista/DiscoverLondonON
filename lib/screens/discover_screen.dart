@@ -8,6 +8,7 @@ import '../widgets/popular_destinations_section.dart';
 import '../widgets/popular_restaurants_section.dart';
 import '../widgets/theme_mode_sheet.dart';
 import '../widgets/trending_creators_section.dart';
+import 'about_screen.dart';
 import 'search_screen.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -174,6 +175,14 @@ class _Header extends StatelessWidget {
             onPressed: () => ThemeModeSheet.show(context, themeController),
             tooltip: 'Appearance',
             icon: const Icon(Icons.brightness_6_outlined, color: Colors.white),
+          ),
+          IconButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const AboutScreen()),
+            ),
+            tooltip: 'About',
+            icon: const Icon(Icons.info_outline_rounded, color: Colors.white),
           ),
         ],
       ),
