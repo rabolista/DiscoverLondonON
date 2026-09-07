@@ -10,9 +10,10 @@ class CategoriesRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 104,
+      height: 112,
       child: ListView(
         scrollDirection: Axis.horizontal,
+        clipBehavior: Clip.none,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
           for (final AppCategory category in Categories.all)
@@ -27,11 +28,22 @@ class CategoriesRow extends StatelessWidget {
                   width: 68,
                   child: Column(
                     children: [
+                      const SizedBox(height: 2),
                       Container(
-                        width: 50,
-                        height: 50,
-                        decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-                        child: Icon(category.icon, size: 20, color: AppColors.primary),
+                        width: 54,
+                        height: 54,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.28),
+                              blurRadius: 12,
+                              offset: const Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                        child: Icon(category.icon, size: 22, color: AppColors.primary),
                       ),
                       const SizedBox(height: 8),
                       Text(

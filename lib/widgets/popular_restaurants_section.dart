@@ -65,7 +65,7 @@ class PopularRestaurantsSection extends StatelessWidget {
                                   const SizedBox(height: 6),
                                   Row(
                                     children: [
-                                      const Icon(Icons.star, size: 12, color: AppColors.primary),
+                                      Icon(Icons.star, size: 12, color: AppColors.accent(context)),
                                       const SizedBox(width: 4),
                                       Expanded(
                                         child: Text(
@@ -82,7 +82,7 @@ class PopularRestaurantsSection extends StatelessWidget {
                                     restaurant.neighbourhood,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
                                   ),
                                 ],
                               ),

@@ -11,7 +11,7 @@ class RestaurantDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(restaurant.name)),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -29,7 +29,7 @@ class RestaurantDetailScreen extends StatelessWidget {
           const SizedBox(height: 8),
           Row(
             children: [
-              const Icon(Icons.star, size: 16, color: AppColors.primary),
+              Icon(Icons.star, size: 16, color: AppColors.accent(context)),
               const SizedBox(width: 4),
               Text(
                 '${restaurant.rating.toStringAsFixed(1)} • ${restaurant.cuisine} • ${restaurant.priceRange}',
@@ -40,12 +40,12 @@ class RestaurantDetailScreen extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             restaurant.neighbourhood,
-            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.primary),
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
           ),
           const SizedBox(height: 12),
           Text(
             restaurant.details,
-            style: TextStyle(fontSize: 15, color: Colors.grey[700], height: 1.4),
+            style: TextStyle(fontSize: 15, color: AppColors.muted(context), height: 1.4),
           ),
           if (restaurant.address.isNotEmpty) ...[
             const SizedBox(height: 16),

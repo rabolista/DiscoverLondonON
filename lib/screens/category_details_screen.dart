@@ -19,18 +19,18 @@ class CategoryDetailsScreen extends StatelessWidget {
     final places = _places;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(category.name)),
       body: places.isEmpty
           ? Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(category.icon, size: 48, color: AppColors.primary.withValues(alpha: 0.5)),
+                  Icon(category.icon, size: 48, color: AppColors.accent(context).withValues(alpha: 0.5)),
                   const SizedBox(height: 16),
                   Text(
                     'No places found for ${category.name} yet.',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
                   ),
                 ],
               ),

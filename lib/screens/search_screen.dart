@@ -58,7 +58,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(
         title: TextField(
           controller: _controller,
@@ -86,12 +86,12 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.search, size: 48, color: AppColors.primary.withValues(alpha: 0.6)),
+            Icon(Icons.search, size: 48, color: AppColors.accent(context).withValues(alpha: 0.6)),
             const SizedBox(height: 16),
             Text(
               'Search London neighbourhoods, restaurants, and creators',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
             ),
           ],
         ),
@@ -104,11 +104,11 @@ class _SearchScreenState extends State<SearchScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.search_off, size: 48, color: Colors.grey[400]),
+          Icon(Icons.search_off, size: 48, color: AppColors.muted(context)),
           const SizedBox(height: 16),
           Text(
             'No results for "$_query"',
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
           ),
         ],
       ),
@@ -122,7 +122,7 @@ class _SearchScreenState extends State<SearchScreen> {
           const _SectionLabel('Neighbourhoods'),
           for (final destination in _destinations)
             ListTile(
-              leading: const Icon(Icons.location_on, color: AppColors.primary),
+              leading: Icon(Icons.location_on, color: AppColors.accent(context)),
               title: Text(destination.name),
               subtitle: Text(destination.region),
               onTap: () => Navigator.push(
@@ -151,7 +151,7 @@ class _SearchScreenState extends State<SearchScreen> {
           const _SectionLabel('Creators'),
           for (final creator in _creators)
             ListTile(
-              leading: const Icon(Icons.person, color: AppColors.primary),
+              leading: Icon(Icons.person, color: AppColors.accent(context)),
               title: Text(creator.name),
               subtitle: Text(creator.category),
             ),
@@ -171,7 +171,7 @@ class _SectionLabel extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
       child: Text(
         text,
-        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey[600]),
+        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.muted(context)),
       ),
     );
   }

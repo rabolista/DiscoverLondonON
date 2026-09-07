@@ -13,7 +13,7 @@ class AllCreatorsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: const Text('London ON Creators')),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -41,17 +41,17 @@ class AllCreatorsScreen extends StatelessWidget {
                             const SizedBox(height: 2),
                             Text(
                               creator.category,
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppColors.primary),
+                              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
                             ),
                             const SizedBox(height: 2),
                             Text(
                               creator.tagline,
-                              style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                              style: TextStyle(fontSize: 12, color: AppColors.muted(context)),
                             ),
                           ],
                         ),
                       ),
-                      Icon(Icons.chevron_right, size: 14, color: Colors.grey[600]),
+                      Icon(Icons.chevron_right, size: 14, color: AppColors.muted(context)),
                     ],
                   ),
                 ),

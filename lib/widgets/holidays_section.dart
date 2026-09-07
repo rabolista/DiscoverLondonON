@@ -39,7 +39,7 @@ class HolidaysSection extends StatelessWidget {
                         children: [
                           Text(
                             holiday.formattedDate,
-                            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.primary),
+                            style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.accent(context)),
                           ),
                           const SizedBox(height: 4),
                           Text(

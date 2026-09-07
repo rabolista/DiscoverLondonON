@@ -16,7 +16,7 @@ class CityGuideScreen extends StatelessWidget {
     final sections = CityGuideData.sectionsFor(destination.name);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(destination.name)),
       body: ListView(
         padding: EdgeInsets.zero,
@@ -61,7 +61,7 @@ class CityGuideScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Text(
                 'More places to visit in ${destination.name} are coming soon.',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
               ),
             )
           else

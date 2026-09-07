@@ -12,7 +12,7 @@ class AllRestaurantsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: const Text('London Restaurants')),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -45,23 +45,23 @@ class AllRestaurantsScreen extends StatelessWidget {
                             const SizedBox(height: 4),
                             Row(
                               children: [
-                                const Icon(Icons.star, size: 10, color: AppColors.primary),
+                                Icon(Icons.star, size: 10, color: AppColors.accent(context)),
                                 const SizedBox(width: 4),
                                 Text(
                                   '${restaurant.rating.toStringAsFixed(1)} • ${restaurant.cuisine} • ${restaurant.priceRange}',
-                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
                                 ),
                               ],
                             ),
                             const SizedBox(height: 2),
                             Text(
                               restaurant.neighbourhood,
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppColors.primary),
+                              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
                             ),
                           ],
                         ),
                       ),
-                      Icon(Icons.chevron_right, size: 14, color: Colors.grey[600]),
+                      Icon(Icons.chevron_right, size: 14, color: AppColors.muted(context)),
                     ],
                   ),
                 ),

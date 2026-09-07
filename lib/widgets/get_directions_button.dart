@@ -23,7 +23,7 @@ class GetDirectionsButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.card(context),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
@@ -48,12 +48,12 @@ class GetDirectionsButton extends StatelessWidget {
                   ),
                   Text(
                     address,
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 12, color: AppColors.muted(context)),
                   ),
                 ],
               ),
             ),
-            Icon(Icons.chevron_right, size: 16, color: Colors.grey[600]),
+            Icon(Icons.chevron_right, size: 16, color: AppColors.muted(context)),
           ],
         ),
       ),

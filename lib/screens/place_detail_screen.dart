@@ -12,7 +12,7 @@ class PlaceDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(place.name)),
       body: ListView(
         children: [
@@ -26,12 +26,12 @@ class PlaceDetailScreen extends StatelessWidget {
                 const SizedBox(height: 6),
                 Text(
                   place.category,
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.primary),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
                 ),
                 const SizedBox(height: 12),
                 Text(
                   place.details,
-                  style: TextStyle(fontSize: 15, color: Colors.grey[700], height: 1.4),
+                  style: TextStyle(fontSize: 15, color: AppColors.muted(context), height: 1.4),
                 ),
                 if (place.address.isNotEmpty) ...[
                   const SizedBox(height: 16),

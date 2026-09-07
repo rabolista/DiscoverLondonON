@@ -10,7 +10,7 @@ class CreatorDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(creator.name)),
       body: ListView(
         children: [
@@ -49,7 +49,7 @@ class CreatorDetailScreen extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   creator.category,
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.primary),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
                 ),
                 const SizedBox(height: 8),
                 Padding(
@@ -57,7 +57,7 @@ class CreatorDetailScreen extends StatelessWidget {
                   child: Text(
                     creator.tagline,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 14, color: AppColors.muted(context)),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -66,7 +66,7 @@ class CreatorDetailScreen extends StatelessWidget {
                   child: Container(
                     width: double.infinity,
                     padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+                    decoration: BoxDecoration(color: AppColors.card(context), borderRadius: BorderRadius.circular(12)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -76,7 +76,7 @@ class CreatorDetailScreen extends StatelessWidget {
                           '${creator.name} is a London, ON-based content creator focused on '
                           '${creator.category.toLowerCase()}. Follow along for the best local tips, hidden gems, '
                           'and recommendations across the Forest City.',
-                          style: TextStyle(fontSize: 14, color: Colors.grey[600], height: 1.4),
+                          style: TextStyle(fontSize: 14, color: AppColors.muted(context), height: 1.4),
                         ),
                       ],
                     ),

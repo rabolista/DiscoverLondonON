@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
 import 'screens/discover_screen.dart';
-import 'theme/colors.dart';
+import 'theme/app_theme.dart';
+import 'theme/theme_controller.dart';
 
-void main() {
-  runApp(const DiscoverLondonApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final themeController = await ThemeController.load();
+  runApp(DiscoverLondonApp(themeController: themeController));
 }
 
 class DiscoverLondonApp extends StatelessWidget {
-  const DiscoverLondonApp({super.key});
+  final ThemeController themeController;
+
+  const DiscoverLondonApp({super.key, required this.themeController});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'London ON',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: AppColors.primary,
-        scaffoldBackgroundColor: AppColors.background,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.primary,
-          foregroundColor: Colors.white,
-        ),
-      ),
-      home: const DiscoverScreen(),
+    return AnimatedBuilder(
+      animation: themeController,
+      builder: (context, _) {
+        return MaterialApp(
+          title: 'London ON',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
+          themeMode: themeController.mode,
+          home: DiscoverScreen(themeController: themeController),
+        );
+      },
     );
   }
 }
-

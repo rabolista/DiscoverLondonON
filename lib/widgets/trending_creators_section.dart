@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/creators.dart';
+import '../theme/colors.dart';
 import '../widgets/avatar_image.dart';
 import '../widgets/section_header.dart';
 import '../screens/all_creators_screen.dart';
@@ -55,7 +56,7 @@ class TrendingCreatorsSection extends StatelessWidget {
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
                           ),
                         ],
                       ),

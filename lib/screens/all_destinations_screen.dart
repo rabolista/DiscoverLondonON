@@ -13,7 +13,7 @@ class AllDestinationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background(context),
       appBar: AppBar(title: const Text('London ON Neighbourhoods')),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
@@ -61,7 +61,7 @@ class AllDestinationsScreen extends StatelessWidget {
                       destination.region,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey[600]),
+                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppColors.muted(context)),
                     ),
                   ),
                 ],

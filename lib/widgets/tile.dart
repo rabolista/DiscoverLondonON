@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../theme/colors.dart';
 
-/// White rounded card with a soft shadow, matching the reference app's tile style.
+/// Rounded card with a soft shadow, matching the reference app's tile style.
 class Tile extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
@@ -9,14 +10,16 @@ class Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: padding,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card(context),
         borderRadius: BorderRadius.circular(6),
+        border: Border.all(color: AppColors.cardBorder(context)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.12),
+            color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.12),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
