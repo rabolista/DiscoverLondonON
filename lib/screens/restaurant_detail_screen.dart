@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/restaurant.dart';
 import '../theme/colors.dart';
 import '../widgets/get_directions_button.dart';
+import '../widgets/image_credit_chip.dart';
+import '../widgets/place_image.dart';
 
 class RestaurantDetailScreen extends StatelessWidget {
   final Restaurant restaurant;
@@ -14,43 +16,57 @@ class RestaurantDetailScreen extends StatelessWidget {
       backgroundColor: AppColors.background(context),
       appBar: AppBar(title: Text(restaurant.name)),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.zero,
         children: [
-          Center(
-            child: Container(
-              width: 110,
-              height: 110,
-              margin: const EdgeInsets.only(top: 16, bottom: 24),
-              decoration: const BoxDecoration(color: AppColors.primary, shape: BoxShape.circle),
-              child: Icon(restaurant.icon, size: 50, color: Colors.white),
+          SizedBox(
+            height: 220,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                PlaceImage(icon: restaurant.icon, iconSize: 48, imageUrl: restaurant.imageUrl),
+                if (restaurant.imageCredit != null)
+                  Positioned(
+                    right: 6,
+                    top: 6,
+                    child: ImageCreditChip(text: restaurant.imageCredit!),
+                  ),
+              ],
             ),
           ),
-          Text(restaurant.name, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              Icon(Icons.star, size: 16, color: AppColors.accent(context)),
-              const SizedBox(width: 4),
-              Text(
-                '${restaurant.rating.toStringAsFixed(1)} • ${restaurant.cuisine} • ${restaurant.priceRange}',
-                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(restaurant.name, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    Icon(Icons.star, size: 16, color: AppColors.accent(context)),
+                    const SizedBox(width: 4),
+                    Text(
+                      '${restaurant.rating.toStringAsFixed(1)} • ${restaurant.cuisine} • ${restaurant.priceRange}',
+                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  restaurant.neighbourhood,
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  restaurant.details,
+                  style: TextStyle(fontSize: 15, color: AppColors.muted(context), height: 1.4),
+                ),
+                if (restaurant.address.isNotEmpty) ...[
+                  const SizedBox(height: 16),
+                  GetDirectionsButton(placeName: restaurant.name, address: restaurant.address),
+                ],
+              ],
+            ),
           ),
-          const SizedBox(height: 4),
-          Text(
-            restaurant.neighbourhood,
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.accent(context)),
-          ),
-          const SizedBox(height: 12),
-          Text(
-            restaurant.details,
-            style: TextStyle(fontSize: 15, color: AppColors.muted(context), height: 1.4),
-          ),
-          if (restaurant.address.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            GetDirectionsButton(placeName: restaurant.name, address: restaurant.address),
-          ],
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/restaurants_data.dart';
 import '../theme/colors.dart';
+import '../widgets/place_image.dart';
 import '../widgets/section_header.dart';
 import '../widgets/tile.dart';
 import '../screens/all_restaurants_screen.dart';
@@ -44,11 +45,17 @@ class PopularRestaurantsSection extends StatelessWidget {
                         padding: const EdgeInsets.all(6),
                         child: Row(
                           children: [
-                            Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(5)),
-                              child: Icon(restaurant.icon, size: 22, color: Colors.white),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: PlaceImage(
+                                  icon: restaurant.icon,
+                                  iconSize: 22,
+                                  imageUrl: restaurant.imageUrl,
+                                ),
+                              ),
                             ),
                             const SizedBox(width: 8),
                             Expanded(

@@ -10,6 +10,10 @@ class Restaurant {
   final double rating;
   final String address;
 
+  /// Representative dish photo (loaded from the network) and its attribution.
+  final String? imageUrl;
+  final String? imageCredit;
+
   const Restaurant({
     required this.name,
     required this.cuisine,
@@ -19,5 +23,7 @@ class Restaurant {
     required this.icon,
     required this.rating,
     this.address = '',
+    this.imageUrl,
+    this.imageCredit,
   });
 }

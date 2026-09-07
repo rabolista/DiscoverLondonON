@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/restaurant.dart';
 import '../theme/colors.dart';
+import '../widgets/place_image.dart';
 import '../widgets/tile.dart';
 import 'restaurant_detail_screen.dart';
 
@@ -30,11 +31,17 @@ class AllRestaurantsScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
-                      Container(
-                        width: 48,
-                        height: 48,
-                        decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(24)),
-                        child: Icon(restaurant.icon, size: 20, color: Colors.white),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(24),
+                        child: SizedBox(
+                          width: 48,
+                          height: 48,
+                          child: PlaceImage(
+                            icon: restaurant.icon,
+                            iconSize: 20,
+                            imageUrl: restaurant.imageUrl,
+                          ),
+                        ),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
